@@ -52,7 +52,9 @@ $chocolateyPackages = @(
     "spotify"
 )
 foreach ($packageName in $chocolateyPackages) {
+    Write-Host Installing $packageName ...
     Install-Package -provider chocolatey $packageName -Force
+    Write-Host Installed $packageName
 }
 
 # download stuff to install manually:
@@ -60,4 +62,7 @@ $desktopPath = [Environment]::GetFolderPath("Desktop")
 cd $desktopPath
 New-Item -ItemType Directory -Force -Path Downloads
 cd Downloads
+Write-Host Downloading stuff to install manually...
 wget https://www.sparklabs.com/downloads/Viscosity%20Installer.exe -OutFile "Viscosity Installer.exe"
+
+Write-Host All done.
