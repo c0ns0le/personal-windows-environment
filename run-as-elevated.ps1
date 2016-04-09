@@ -16,7 +16,7 @@ Set-ItemProperty $key HideFileExt 0
 Stop-Process -processname explorer # starts automatically
 
 # Remove preinstalled Windows Store apps (except windows store itself):
-Get-AppxPackage -AllUsers | where-object {$_.name –NotLike "*windowsstore*"} | Remove-AppxPackage
+Get-AppxPackage -AllUsers | where-object {$_.name -NotLike "*windowsstore*"} | Remove-AppxPackage
 Get-AppxProvisionedPackage –Online | where-object {$_.packagename –NotLike "*windowsstore*"} | Remove-AppxProvisionedPackage -Online
 
 # install chocolatey packages
