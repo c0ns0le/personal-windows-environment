@@ -1,4 +1,5 @@
-cd [Environment]::GetFolderPath("Desktop")
+$desktopPath = [Environment]::GetFolderPath("Desktop")
+cd $desktopPath
 New-Item -ItemType Directory -Force -Path Downloads
 cd Downloads
 Write-Host Downloading script...
