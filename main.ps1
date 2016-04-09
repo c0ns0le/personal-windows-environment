@@ -1,4 +1,4 @@
-$desktopPath = [Environment]::GetFolderPath('Desktop')
+﻿$desktopPath = [Environment]::GetFolderPath('Desktop')
 Set-Location $desktopPath
 New-Item -ItemType Directory -Force -Path Downloads
 Set-Location Downloads

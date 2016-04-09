@@ -1,4 +1,4 @@
-# ignore errors
+﻿# ignore errors
 $ErrorActionPreference = "Continue"
 
 # import modules
